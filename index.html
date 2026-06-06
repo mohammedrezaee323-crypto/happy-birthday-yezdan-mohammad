@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Yezdan</title>
+</head>
+<body style="background:#111;color:white;text-align:center;font-family:tahoma;padding-top:80px;">
+
+<h1>🎉 Happy Birthday Yezdan 🎉</h1>
+<p>رمز را وارد کن</p>
+
+<input type="password" id="pass" placeholder="Password">
+<button onclick="checkPass()">ورود</button>
+
+<script>
+function checkPass(){
+  if(document.getElementById('pass').value==='18.3.1390'){
+    document.body.innerHTML=`
+    <h1>🎉 تولدت مبارک یزدان 🎉</h1>
+    <p style="font-size:22px;line-height:2">
+    تولدت مبارک داداش ❤️🎉<br><br>
+    بالاخره ۱۶ ساله شدی پیرمرد! 😂<br>
+    امیدوارم امسال هرچی می‌خوای بهش برسی و کلی حال خوب داشته باشی.<br>
+    خوشحالم که این همه سال رفیق هم بودیم.<br>
+    مراقب خودت باش و مثل همیشه خفن بمون.<br><br>
+    تولدت مبارک رفیق! ❤️
+    </p>`;
+
+    let speech=new SpeechSynthesisUtterance(
+    "تولدت مبارک یزدان. بالاخره شانزده ساله شدی پیرمرد. امیدوارم امسال هرچی می‌خواهی بهش برسی و کلی حال خوب داشته باشی. خوشحالم که این همه سال رفیق هم بودیم. مراقب خودت باش و مثل همیشه خفن بمون. تولدت مبارک رفیق.");
+    speech.lang='fa-IR';
+    window.speechSynthesis.speak(speech);
+  }else{
+    alert('رمز اشتباه است');
+  }
+}
+</script>
+
+</body>
+</html>
