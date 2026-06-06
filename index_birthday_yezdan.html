@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Yezdan</title>
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Tahoma, Arial, sans-serif;
+    text-align:center;
+    padding-top:100px;
+}
+.box{
+    width:320px;
+    margin:auto;
+    background:#222;
+    padding:30px;
+    border-radius:15px;
+}
+input{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+}
+button{
+    margin-top:15px;
+    padding:10px 25px;
+}
+h1{color:#ff4d6d;}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h1>🎉 Happy Birthday Yezdan 🎉</h1>
+<p>رمز را وارد کن</p>
+<input type="password" id="pass" placeholder="Password">
+<br>
+<button onclick="checkPass()">Open</button>
+</div>
+
+<script>
+function checkPass(){
+    let password = document.getElementById("pass").value;
+
+    if(password === "18.3.1390"){
+
+        document.body.innerHTML = `
+        <div style="text-align:center;padding:50px;">
+        <h1>🎉 Happy Birthday Yezdan 🎉</h1>
+
+        <p style="font-size:22px;line-height:2">
+        تولدت مبارک داداش ❤️🎉<br><br>
+        بالاخره ۱۶ ساله شدی پیرمرد! 😂<br>
+        امیدوارم امسال هرچی می‌خوای بهش برسی و کلی حال خوب داشته باشی.<br>
+        خوشحالم که این همه سال رفیق هم بودیم.<br>
+        مراقب خودت باش و مثل همیشه خفن بمون.<br><br>
+        تولدت مبارک رفیق! ❤️
+        </p>
+        </div>
+        `;
+
+        let text = "تولدت مبارک یزدان. بالاخره شانزده ساله شدی پیرمرد. امیدوارم امسال هرچی می‌خوای بهش برسی و کلی حال خوب داشته باشی. خوشحالم که این همه سال رفیق هم بودیم. مراقب خودت باش و مثل همیشه خفن بمون. تولدت مبارک رفیق.";
+
+        let speech = new SpeechSynthesisUtterance(text);
+        speech.lang = "fa-IR";
+        speech.rate = 0.9;
+        speech.pitch = 1;
+
+        window.speechSynthesis.speak(speech);
+
+    }else{
+        alert("رمز اشتباه است!");
+    }
+}
+</script>
+
+</body>
+</html>
